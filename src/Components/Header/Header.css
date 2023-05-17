@@ -1,0 +1,45 @@
+.header {
+    background: #2874f0;
+    height: 56px;
+    margin-top: 2.5px;
+    display: flex;
+    align-items: center;
+}
+
+img {
+    margin-left: 150px;
+    margin-top: 3px;
+    /* width: 15; */
+    height: 30px;
+    background: #2874f0;
+
+}
+
+.inputBox {
+    margin-left: 10px;
+    height: 25px;
+    width: 25%;
+
+
+}
+
+.LoginBtn {
+    color: #2874f0;
+    margin-left: 35px;
+    width: 90px;
+    height: 30px;
+}
+
+.text {
+    margin-left: 25px;
+    color: white;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cart {
+    color: white;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
