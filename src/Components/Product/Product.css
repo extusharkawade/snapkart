@@ -1,0 +1,9 @@
+.product-card {
+    display: flex;
+    gap: 1rem;
+    width: 100% !important;
+    border: none;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}

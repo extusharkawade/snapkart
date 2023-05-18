@@ -12,7 +12,6 @@ export default function Header() {
         type="text"
         title={CONSTANTS.SEARCH_INPUT}
         placeholder={CONSTANTS.SEARCH_INPUT}
-        value=""
       ></input>
       <button className="LoginBtn">{CONSTANTS.LOGIN}</button>
       <h5 className="text ">{CONSTANTS.BECOMESELLER}</h5>

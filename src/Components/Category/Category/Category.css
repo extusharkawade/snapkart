@@ -1,0 +1,10 @@
+.category {
+    /* width: 100px; */
+    background-color: blue;
+}
+
+.card-img-top {
+    margin: 0 !important;
+    margin-left: 0 !important;
+
+}

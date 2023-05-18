@@ -1,0 +1,21 @@
+.container {
+    height: 18rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    /* width: 220px; */
+}
+
+p {
+    font-size: 14px;
+    font-family: Roboto, Arial, sans-serif;
+    letter-spacing: 0;
+    color: #212121
+}
+
+.details {
+    width: 500px !important;
+    height: auto !important;
+    margin-left: 20px;
+    overflow: hidden;
+}
