@@ -1,0 +1,39 @@
+.prod-image {
+    background-color: red;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.prod-details {
+    margin-top: 7%;
+    width: 100% !important;
+    height: auto !important;
+    display: flex;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.prod-name {
+    font-weight: bold;
+    width: 100%;
+
+}
+
+.prod-name-desc {
+    margin-top: 6%;
+    margin-left: 1%;
+}
+
+.prod-desc {
+    margin-top: 10%;
+}
+
+.prod-price {
+    font-weight: bolder;
+    font-size: xx-large;
+
+}
+
+.buttons {
+    margin-top: 10%;
+}

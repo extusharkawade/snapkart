@@ -2,7 +2,7 @@ import "./App.css";
 import { CustomCarousel } from "./Components/Carousel/CustomCarousel";
 import Categories from "./Components/Category/Categories";
 import Header from "./Components/Header/Header";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 import Product from "./Components/Product/Product";
 import Home from "./Components/Home/Home";
 import ProductDetails from "./Components/Product/ProductDetails/ProductDetails";

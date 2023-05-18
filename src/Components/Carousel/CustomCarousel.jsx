@@ -1,6 +1,6 @@
 import Carousel from "react-bootstrap/Carousel";
 import ProductDetails from "../Product/ProductDetails/ProductDetails";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export const CustomCarousel = () => {
   const prod = "Tushar";
@@ -13,17 +13,17 @@ export const CustomCarousel = () => {
   return (
     <Carousel>
       <Carousel.Item>
-        <Link to={`/product-details/${12}`}>
+        <NavLink to={`/product-details/${12}`}>
           <img
             className="d-block w-100 h-280px"
             src="AppImages/Carsoul/mobilecarsoule.JPG"
             alt="First slide"
           />
-        </Link>
+        </NavLink>
       </Carousel.Item>
 
       <Carousel.Item>
-        <Link to={`/product-details/${8}`}>
+        <NavLink to={`/product-details/${8}`}>
           <img
             className="d-block w-100 h-280px"
             src="AppImages/Carsoul/offercarsoule.jpg"
@@ -32,10 +32,10 @@ export const CustomCarousel = () => {
               console.log("Offer");
             }}
           />
-        </Link>
+        </NavLink>
       </Carousel.Item>
       <Carousel.Item>
-        <Link to={`/product-details/${9}`}>
+        <NavLink to={`/product-details/${9}`}>
           <img
             className="d-block w-100 h-280px"
             src="AppImages/Carsoul/carsoul.jpg"
@@ -44,7 +44,7 @@ export const CustomCarousel = () => {
               console.log("Realme");
             }}
           />
-        </Link>
+        </NavLink>
       </Carousel.Item>
     </Carousel>
   );

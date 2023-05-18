@@ -19,8 +19,12 @@ export const GetCategoryImage = (props) => {
 }
 
 export const GetProductImage = (imageName) => {
-    const path = "/AppImages/Products/";
-    // const source = path.concat(imageName);
     return `/AppImages/Products/${imageName}`;
+}
 
+export const GetProductImageComponent = (props) => {
+    // const path = "AppImages/Products/";
+    // const source = path.concat(props.imageName);
+    return (<img className="card-img-top" src={props.imageName} alt={props.imageName} style={{ height: "25rem", width: "25rem" }} />
+    )
 }
