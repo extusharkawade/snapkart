@@ -3,7 +3,6 @@ import ProductDetails from "../Product/ProductDetails/ProductDetails";
 import { Link, NavLink } from "react-router-dom";
 
 export const CustomCarousel = () => {
-  const prod = "Tushar";
   const clicked = (clickedCarsole) => {
     {
       <ProductDetails product={clickedCarsole} />;
@@ -13,7 +12,7 @@ export const CustomCarousel = () => {
   return (
     <Carousel>
       <Carousel.Item>
-        <NavLink to={`/product-details/${12}`}>
+        <NavLink to={`/product-details/${11}`}>
           <img
             className="d-block w-100 h-280px"
             src="AppImages/Carsoul/mobilecarsoule.JPG"
@@ -35,7 +34,7 @@ export const CustomCarousel = () => {
         </NavLink>
       </Carousel.Item>
       <Carousel.Item>
-        <NavLink to={`/product-details/${9}`}>
+        <NavLink to={`/product-details/${12}`}>
           <img
             className="d-block w-100 h-280px"
             src="AppImages/Carsoul/carsoul.jpg"

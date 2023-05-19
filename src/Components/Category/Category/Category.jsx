@@ -11,7 +11,7 @@ function Category(props) {
   const catId = props.categoryComponent.id;
 
   return (
-    <div>
+    <div data-testid="single-category">
       <div
         className="card"
         style={{
@@ -20,9 +20,11 @@ function Category(props) {
         }}
       >
         <NavLink to={`/products/${catId}`}>
-          <GetCategoryImage imageName={imageName} />
-          <div className="card-body">
-            <p className="card-text ">{category}</p>
+          <div data-testid="card">
+            <GetCategoryImage imageName={imageName} />
+            <div className="card-body">
+              <p className="card-text ">{category}</p>
+            </div>
           </div>
         </NavLink>
       </div>

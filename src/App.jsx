@@ -1,6 +1,6 @@
 import "./App.css";
 import { CustomCarousel } from "./Components/Carousel/CustomCarousel";
-import Categories from "./Components/Category/Categories";
+import Categories from "./Components/Category/Categories/Categories";
 import Header from "./Components/Header/Header";
 import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 import Product from "./Components/Product/Product";

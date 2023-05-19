@@ -14,7 +14,7 @@ export default function Header() {
         placeholder={CONSTANTS.SEARCH_INPUT}
       ></input>
       <button className="LoginBtn">{CONSTANTS.LOGIN}</button>
-      <h5 className="text ">{CONSTANTS.BECOMESELLER}</h5>
+      <h5 className="text ">{CONSTANTS.BECOME_SELLER}</h5>
       <Cart />
       <h5 className="cart">Cart</h5>
     </div>

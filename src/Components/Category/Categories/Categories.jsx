@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import style from "./Categories.css";
 import axios from "axios";
-import Category from "./Category/Category";
-import CONSTANTS from "../../Gobal/Constant";
+import Category from "../Category/Category";
+import CONSTANTS from "../../../Gobal/Constant";
 function Categories() {
   const [category, setcategory] = useState([]);
   const [error, seterror] = useState(false);
@@ -11,7 +11,6 @@ function Categories() {
       .get("https://6464b8bd043c103502c101f4.mockapi.io/Categories")
       .then((res) => {
         setcategory(res?.data);
-        console.log(res?.data);
       })
       .catch((err) => {
         console.log(err);
@@ -20,7 +19,7 @@ function Categories() {
   }, []);
 
   return (
-    <div className="categories">
+    <div className="categories" data-testid="categories">
       {!error ? (
         category.map((cat) => {
           return <Category categoryComponent={cat} />;

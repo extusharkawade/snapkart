@@ -13,17 +13,17 @@ function RenderProduct(props) {
   console.log("This is path", path);
 
   return (
-    <>
-      <NavLink to={`/product-details/${id}`}>
+    <NavLink to={`/product-details/${id}`}>
+      <div data-testid="rendered-product">
         <div className="container">
-          <img src={path} height={250} width={300} />
+          <img src={path} height={250} width={300} alt={image} />
           <div className="details">
             <h5>{props.prod.prodName}</h5>
             <p>{props.prod.desc}</p>
           </div>
         </div>
-      </NavLink>
-    </>
+      </div>
+    </NavLink>
   );
 }
 
