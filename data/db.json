@@ -1,0 +1,176 @@
+{
+    "Categories": [
+        {
+            "name": "Grocery",
+            "Image": "grocery.JPG",
+            "id": "1"
+        },
+        {
+            "name": "Mobiles",
+            "Image": "mobiles.JPG",
+            "id": "2"
+        },
+        {
+            "name": "Fashion",
+            "Image": "fashion.JPG",
+            "id": "3"
+        },
+        {
+            "name": "Electronics",
+            "Image": "electronics.JPG",
+            "id": "4"
+        },
+        {
+            "name": "Appliances",
+            "Image": "appliances.JPG",
+            "id": "5"
+        }
+    ],
+    "Products": [
+        {
+            "prodName": "Farmley Selecta Light Broken (Akrot) Walnuts  (200 g)\r\n",
+            "desc": "Farmley, source all the nuts & dry fruits directly from the farms ",
+            "price": 215,
+            "catId": "1",
+            "image": "walnut.jpg",
+            "id": "1"
+        },
+        {
+            "prodName": "Tata Sampann Yumside Schezwan Noodles with Veggies, Serves 2 Pax 285 g",
+            "desc": "some random description",
+            "price": 82,
+            "catId": "1",
+            "image": "noodles.jpg",
+            "id": "2"
+        },
+        {
+            "prodName": "Moto Edge 40",
+            "desc": "Flex Your Stories.Lightweight and stylish, the EOS M50 Mark II is fun and easy to use with Wi-Fi connectivity for content creators to stay close to your audience at all times. Keep your social media feeds lit with high-quality visual storytelling in 4K and accurate eye and face detection autofocusing.Whatever content you create, set yourself apart from the crowd and give your audience something special. The EOS M50 Mark II gives you more ways to shoot photos, movies and live streams and connect with your followers.,suitable_for-Beginners,processor-DIGIC 8,sensor_type-APS-C CMOS,continuous_shooting_speed-11 fps (in High Continuous shooting)n",
+            "price": 52000,
+            "catId": "2",
+            "image": "motoedge.jpg",
+            "id": "3"
+        },
+        {
+            "prodName": "Nothing Phone (1) (White, 256 GB)  (8 GB RAM)",
+            "desc": "some random description",
+            "price": 33000,
+            "catId": "2",
+            "image": "nothing.jpg",
+            "id": "4"
+        },
+        {
+            "prodName": "Google Pixel 7a (Sea, 128 GB)  (8 GB RAM)\n",
+            "desc": "some random description",
+            "price": 44000,
+            "catId": "2",
+            "image": "pixel.jpg",
+            "id": "5"
+        },
+        {
+            "prodName": "Farmley Selecta Light Broken (Akrot) Walnuts  (200 g)\r\n",
+            "price": 215,
+            "catId": "1",
+            "image": "walnuts.jpg",
+            "id": "6"
+        },
+        {
+            "prodName": "Tata Sampann Yumside Schezwan Noodles with Veggies, Hot & Spicy, Ready to Eat Meal, Serves 2 Pax 285 g",
+            "price": 82,
+            "catId": "1",
+            "image": "noodles.jpg",
+            "id": "7"
+        },
+        {
+            "prodName": "Moto Edge 40",
+            "price": 52000,
+            "catId": "2",
+            "image": "motoedge.jpg",
+            "id": "8"
+        },
+        {
+            "prodName": "Nothing Phone (1) (White, 256 GB)  (8 GB RAM)",
+            "price": 33000,
+            "catId": "2",
+            "image": "nothing.jpg",
+            "id": "8"
+        },
+        {
+            "prodName": "Google Pixel 7a (Sea, 128 GB)  (8 GB RAM)\n",
+            "price": 44000,
+            "catId": "2",
+            "image": "pixel.jpg",
+            "id": "9"
+        },
+        {
+            "prodName": "Men Slim Fit Checkered Spread Collar Casual Shirt",
+            "price": 1500,
+            "catId": "3",
+            "image": "menshirt.jpg",
+            "id": "10"
+        },
+        {
+            "prodName": "POCO C51 (Royal Blue, 64 GB)  (4 GB RAM)",
+            "desc": "Give your inner tech nerd a treat with the POCO C51 smartphone, which mesmerises you from the minute you ",
+            "price": 7249,
+            "catId": "2",
+            "image": "poco.jpg",
+            "id": "11"
+        },
+        {
+            "prodName": "realme-c55",
+            "desc": "Demo",
+            "price": 9999,
+            "catId": "2",
+            "image": "realme-c55.jpg",
+            "id": "12"
+        },
+        {
+            "prodName": "acer Nitro 23.8 inch Full HD LED Backlit IPS Panel Gaming Monitor (VG240Y)  (Response Time: 0.5 ms, 165 Hz Refresh Rate)",
+            "desc": "You can play a variety of games with the Acer Nitro 71.88 cm (23.8) Full HD Gaming Monitor.",
+            "price": 11599,
+            "catId": "2",
+            "image": "acer-nitro-23.8.jpg",
+            "id": "13"
+        },
+        {
+            "prodName": "Drogo Multi-Purpose Ergonomic Gaming Chair with Adjustable Seat, Head & USB Massager Gaming Chair  ",
+            "desc": "ERGONOMIC DESIGN: Gaming chair linkage armrest design gaming chair with USB cable power supply massager",
+            "price": 17991,
+            "catId": "2",
+            "image": "gaming-chair.jpg",
+            "id": "14"
+        },
+        {
+            "prodName": "Surf excel Easy Wash Detergent Powder 1.5 kg\n",
+            "price": 197,
+            "catId": "1",
+            "image": "surf-excel.jpg",
+            "id": "15"
+        },
+        {
+            "prodName": "Ariel Top Load Matic Fresh Liquid Detergent  (3 L)",
+            "price": 475,
+            "catId": "1",
+            "image": "ariel-top.jpg",
+            "id": "16"
+        },
+        {
+            "prodName": "Nescafe Gold Blend Instant Coffee  (50 g)",
+            "price": 278,
+            "catId": "1",
+            "image": "nescafe-gold.jpg",
+            "id": "17"
+        },
+        {
+            "prodName": "Men Graphic Print Round Neck White T-Shirt",
+            "price": 531,
+            "catId": "3",
+            "image": "ducati-shirt.jpg",
+            "id": "18"
+        }
+    ],
+    "Cart": [
+        {}
+    ]
+}

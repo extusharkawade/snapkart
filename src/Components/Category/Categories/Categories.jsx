@@ -3,12 +3,13 @@ import style from "./Categories.css";
 import axios from "axios";
 import Category from "../Category/Category";
 import CONSTANTS from "../../../Gobal/Constant";
+import Api from "../../../Gobal/Api";
 function Categories() {
   const [category, setcategory] = useState([]);
   const [error, seterror] = useState(false);
   useEffect(() => {
     axios
-      .get("https://6464b8bd043c103502c101f4.mockapi.io/Categories")
+      .get(Api.GET_CATEGORIES)
       .then((res) => {
         setcategory(res?.data);
       })

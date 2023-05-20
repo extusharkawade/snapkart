@@ -6,6 +6,9 @@ import {
   GetProductImageComponent,
 } from "../../../Gobal/Images";
 import "./ProductDetails.css";
+import Api from "../../../Gobal/Api";
+import CONSTANTS from "../../../Gobal/Constant";
+import SelectQuantity from "./ProductDetailsComponents/SelectQuantity";
 
 function ProductDetails() {
   var path;
@@ -13,9 +16,7 @@ function ProductDetails() {
   const prodId = params.product;
   const [products, setproducts] = useState();
   const [error, seterror] = useState(true);
-  const api = "https://6464b8bd043c103502c101f4.mockapi.io/Products/".concat(
-    prodId
-  );
+  const api = Api.GET_PRODUCT_BY_ID.concat(prodId);
 
   useEffect(() => {
     axios
@@ -38,16 +39,15 @@ function ProductDetails() {
       <div className="prod-name-desc">
         <div className="prod-name"> {products?.prodName}</div>
         <div className="prod-price">₹{products?.price}</div>
+
+        {<SelectQuantity />}
         <p className="prod-desc">{products?.desc}</p>
         <div className="buttons">
-          {" "}
           <button type="button" class="btn btn-outline-success">
-            Buy now
+            {CONSTANTS.BUY_NOW}
           </button>
-          {"    "}
-          {"     "}
           <button type="button" class="btn btn-danger">
-            Add To Cart
+            {CONSTANTS.ADD_TO_CART}
           </button>
         </div>
       </div>
