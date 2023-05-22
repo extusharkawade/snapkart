@@ -40,7 +40,6 @@ function ProductDetails() {
         <div className="prod-name"> {products?.prodName}</div>
         <div className="prod-price">₹{products?.price}</div>
 
-        {<SelectQuantity />}
         <p className="prod-desc">{products?.desc}</p>
         <div className="buttons">
           <button type="button" class="btn btn-outline-success">

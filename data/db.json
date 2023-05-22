@@ -171,6 +171,26 @@
         }
     ],
     "Cart": [
-        {}
+        {
+            "id": "1",
+            "Products": [
+                {
+                    "prodName": "Farmley Selecta Light Broken (Akrot) Walnuts  (200 g)\r\n",
+                    "desc": "Farmley, source all the nuts & dry fruits directly from the farms ",
+                    "price": 215,
+                    "catId": "1",
+                    "image": "walnut.jpg",
+                    "id": "1"
+                },
+                {
+                    "prodName": "Tata Sampann Yumside Schezwan Noodles with Veggies, Serves 2 Pax 285 g",
+                    "desc": "some random description",
+                    "price": 82,
+                    "catId": "1",
+                    "image": "noodles.jpg",
+                    "id": "2"
+                }
+            ]
+        }
     ]
 }
