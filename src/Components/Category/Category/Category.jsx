@@ -3,7 +3,8 @@ import { Fashion, GetCategoryImage } from "../../../Gobal/Images";
 import { Link, NavLink, Navigate, useNavigate } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.css";
-import Product from "../../Product/Product";
+// import Product from "../../Product/Product";
+import Product from "../../Product/ProductComponent/Product";
 
 function Category(props) {
   const imageName = props.categoryComponent.Image;

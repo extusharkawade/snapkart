@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import RenderProduct from "./RenderProduct/RenderProduct";
+import RenderProduct from "../RenderProduct/RenderProduct";
 import "./Product.css";
-import Api from "../../Gobal/Api";
+import Api from "../../../Gobal/Api";
 function Product(props) {
   const params = useParams();
   const [products, setproducts] = useState([]);
   const [error, setError] = useState(true);
-  const api = Api.GET_PRODUCT_BY_CAT_ID.concat(params.catId);
+  var api;
+  if (params.catId === undefined) {
+    api = Api.GET_ALL_PRODUCTS;
+  } else {
+    api = Api.GET_PRODUCT_BY_CAT_ID.concat(params?.catId);
+  }
   useEffect(() => {
     axios
       .get(api)
@@ -23,11 +28,17 @@ function Product(props) {
   }, []);
 
   return (
-    <div className="product-card">
-      {products.map((prod) => {
-        return <RenderProduct prod={prod} />;
-      })}
-    </div>
+    <>
+      {error === false && products.length > 0 ? (
+        <div className="product-card" data-testid="products">
+          {products.map((prod) => {
+            return <RenderProduct prod={prod} />;
+          })}
+        </div>
+      ) : (
+        <div> ⚠ No Products in this category</div>
+      )}
+    </>
   );
 }
 

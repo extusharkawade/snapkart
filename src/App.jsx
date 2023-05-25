@@ -3,7 +3,7 @@ import { CustomCarousel } from "./Components/Carousel/CustomCarousel";
 import Categories from "./Components/Category/Categories/Categories";
 import Header from "./Components/Header/Header";
 import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
-import Product from "./Components/Product/Product";
+import Product from "./Components/Product/ProductComponent/Product";
 import Home from "./Components/Home/Home";
 import ProductDetails from "./Components/Product/ProductDetails/ProductDetails";
 import Cart from "./Components/Cart/Cart";
