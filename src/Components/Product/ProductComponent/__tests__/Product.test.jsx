@@ -46,6 +46,15 @@ describe("Product", () => {
     });
   });
 
+  test("Should render componenet with undefined catid", async () => {
+    const { getByTestId } = render(<Product catId={22} />, {
+      wrapper: BrowserRouter,
+    });
+    await waitFor(() => {
+      expect(getByTestId("products")).toBeInTheDocument();
+    });
+  });
+
   test("Should show error messgage data failed to login ", async () => {
     axios.get.mockRejectedValue({ data: [] });
     const { queryByTestId, container } = render(<Product catId={1} />);

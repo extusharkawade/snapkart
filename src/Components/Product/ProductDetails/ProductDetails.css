@@ -25,7 +25,12 @@
 }
 
 .prod-desc {
-    margin-top: 10%;
+    /* margin-top: 10%; */
+    text-align: left;
+    width: 80%;
+
+
+
 }
 
 .prod-price {
@@ -34,6 +39,9 @@
 
 }
 
+
 .buttons {
-    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
 }

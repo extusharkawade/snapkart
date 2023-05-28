@@ -24,6 +24,7 @@ function ProductDetails() {
       .then((res) => {
         setproducts(res.data);
         console.log(res?.data);
+        seterror(false);
       })
       .catch((err) => {
         console.log(err);
@@ -33,8 +34,10 @@ function ProductDetails() {
   path = GetProductImage(products?.image);
 
   console.log(path);
-  return (
-    <div className="prod-details">
+  return error ? (
+    <div>⚠ Something went wrong</div>
+  ) : (
+    <div className="prod-details" data-testid="prod-details">
       {<GetProductImageComponent imageName={path} />}
       <div className="prod-name-desc">
         <div className="prod-name"> {products?.prodName}</div>
@@ -42,12 +45,16 @@ function ProductDetails() {
 
         <p className="prod-desc">{products?.desc}</p>
         <div className="buttons">
-          <button type="button" class="btn btn-outline-success">
-            {CONSTANTS.BUY_NOW}
-          </button>
-          <button type="button" class="btn btn-danger">
-            {CONSTANTS.ADD_TO_CART}
-          </button>
+          <div>
+            <button type="button" class="btn btn-outline-success">
+              {CONSTANTS.BUY_NOW}
+            </button>
+          </div>
+          <div>
+            <button type="button" class="btn btn-danger">
+              {CONSTANTS.ADD_TO_CART}
+            </button>
+          </div>
         </div>
       </div>
     </div>

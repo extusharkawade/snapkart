@@ -1,9 +1,10 @@
 import { render } from "@testing-library/react";
 import React from "react";
 import Header from "../Header";
+import { BrowserRouter } from "react-router-dom";
 
 const renderHeader = () => {
-  return render(<Header />);
+  return render(<Header />, { wrapper: BrowserRouter });
 };
 describe("Header", () => {
   it("Component should render", () => {
