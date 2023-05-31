@@ -7,6 +7,7 @@ function SelectQuantity(props) {
       <Form.Select
         aria-label="Select Quantity"
         id="Quantity"
+        defaultValue={props.quantity}
         onChange={(e) => {
           props.setQuantity(e.target.value);
         }}

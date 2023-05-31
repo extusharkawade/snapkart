@@ -5,6 +5,12 @@ import SelectQuantity from "../../Product/ProductDetails/ProductDetailsComponent
 import { action, observable } from "mobx";
 import QuantityStore from "../../../Store2/QuantityStore";
 import { RootStore, useStore } from "../../../Store2/RootStore/RootStore";
+import axios from "axios";
+import Api from "../../../Gobal/Api";
+import "./CartProduct.css";
+import { useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import CONSTANTS from "../../../Gobal/Constant";
 
 // class QuantityStore {
 //   quantity = observable.box(1);
@@ -23,47 +29,97 @@ import { RootStore, useStore } from "../../../Store2/RootStore/RootStore";
 // }
 
 const CartProduct = observer((props) => {
-  // const {
-  //   rootStore: { countStore },
-  // } = useStore();
+  const getApi = Api.GET_PRODUCT_BY_ID.concat(props.product.prodId);
+  const deleteApi = Api.DELETE_PRODUCT_FROM_CART.concat(props.product.id);
+  const [removeBtn, setremoveBtn] = useState("REMOVE");
+  const [path, setpath] = useState("");
+  const [quantity, setQuantity] = useState(props.product.quantity);
+  const [price, setprice] = useState(0);
+  const [prodName, setprodName] = useState("");
 
-  const path = GetProductImage(props.product.image);
-  const [quantity, setQuantity] = useState(1);
-  const price = props.product.price;
   let quantityStore;
   quantityStore = new QuantityStore(price, quantity);
 
   quantityStore.calculatePrice();
 
+  const getProductDetails = () => {
+    axios
+      .get(getApi)
+      .then((res) => {
+        const product = res.data;
+        setpath(GetProductImage(product.image));
+        setprice(product.price);
+        setprodName(product.prodName);
+        console.log("This is data", path);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  useEffect(() => {
+    getProductDetails();
+  }, []);
+
+  const deleteProduct = () => {
+    console.log("Removing product", deleteApi);
+    axios
+      .delete(deleteApi)
+      .then((res) => {
+        console.log("Product removed from cart");
+        delete props.rawCart[props.index];
+        toast.error(CONSTANTS.ITEM_REMOVED_FROM_CART, {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+
+        props.setRawCart([...props.rawCart]);
+      })
+      .catch((error) => {
+        console.log("Error while deleting product", error);
+      });
+  };
+
   return (
-    <>
-      <div
-        style={{
-          display: "flex",
-          padding: "2rem",
-          alignItems: "center",
-          gap: "2rem",
-          width: "70%",
-          marginLeft: "3rem",
-          borderBottom: "1px solid",
-        }}
-      >
-        {<GetProductImageForCart imageName={path} />}
-        <div>
-          <div style={{ fontWeight: "bold", width: "100%" }}>
-            {props.product.prodName}
+    <div style={{ marginBottom: "40px" }}>
+      <div className="main-class">
+        <div className="img-class">
+          <div>{<GetProductImageForCart imageName={path} />}</div>
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
+          <div
+            style={{ marginTop: "-80px", fontWeight: "bold", width: "100%" }}
+          >
+            {prodName}
           </div>
           <div style={{}}> {props.product.price}</div>
-
-          {<SelectQuantity setQuantity={setQuantity} />}
+          {quantity === 1 ? (
+            <h3> ₹ {price}</h3>
+          ) : (
+            <h3> ₹ {quantityStore.price.get()}</h3>
+          )}
         </div>
-        {quantity === 1 ? (
-          <h3>{price}</h3>
-        ) : (
-          <h3> {quantityStore.price.get()}</h3>
-        )}
       </div>
-    </>
+      <div className="select">
+        <div>
+          <SelectQuantity
+            className="select-quantity"
+            setQuantity={setQuantity}
+            quantity={quantity}
+          />
+        </div>
+        <div className="removeBtn" onClick={deleteProduct}>
+          {removeBtn}
+        </div>
+      </div>
+      <ToastContainer />
+    </div>
   );
 });
 

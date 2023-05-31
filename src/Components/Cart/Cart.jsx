@@ -4,24 +4,40 @@ import Api from "../../Gobal/Api";
 import CartProduct from "./CartProduct/CartProduct";
 
 function Cart() {
-  const [cart, setcart] = useState([]);
-  const [error, seterror] = useState();
+  const [rawCart, setRawCart] = useState([]);
+  const [error, seterror] = useState(true);
 
   useEffect(() => {
     axios
       .get(Api.GET_CART)
       .then((res) => {
-        setcart(res?.data);
+        setRawCart(res?.data);
+        seterror(false);
       })
       .catch((error) => {
-        seterror(error);
+        seterror(true);
       });
-  }, []);
+  }, [rawCart.product]);
 
-  console.log(cart.Products);
-  return cart?.Products?.map((product) => {
-    return <CartProduct product={product} />;
-  });
+  console.log("This is cart", rawCart);
+  return !error ? (
+    rawCart?.map((product, index) => {
+      if (product !== undefined)
+        return (
+          <div data-testid="cart-component">
+            <CartProduct
+              key={index}
+              index={index}
+              product={product}
+              rawCart={rawCart}
+              setRawCart={setRawCart}
+            />
+          </div>
+        );
+    })
+  ) : (
+    <div data-testid="error-page">Error Page</div>
+  );
 }
 
 export default Cart;

@@ -1,0 +1,41 @@
+.main-class {
+    display: flex;
+    align-Items: center;
+    gap: 2rem;
+    width: 70%;
+    margin: auto;
+    border-Bottom: 1px solid #0c0b0b,
+}
+
+.img-class {
+    max-width: "300px",
+}
+
+.select {
+    margin: auto;
+    display: flex;
+    width: 70% !important;
+    margin-left: 284px;
+    align-items: center;
+    gap: 20px;
+}
+
+.select-quantity {
+    width: 300px !important;
+    background-color: green !important;
+}
+
+.removeBtn {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 12px 0 0 65px;
+    color: red;
+
+}
+
+.removeBtn:hover {
+    color: rgb(98, 98, 246);
+    cursor: pointer;
+    font-weight: 500;
+    display: inline-block;
+}

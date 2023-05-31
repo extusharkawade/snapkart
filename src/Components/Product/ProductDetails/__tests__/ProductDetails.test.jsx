@@ -1,11 +1,12 @@
 import { render, waitFor } from "@testing-library/react";
 import ProductDetails from "../ProductDetails";
 import axios from "axios";
+import { BrowserRouter } from "react-router-dom";
 
 jest.mock("axios");
 
 const renderComponent = () => {
-  return render(<ProductDetails />);
+  return render(<ProductDetails />, { wrapper: BrowserRouter });
 };
 describe("ProductDetails", () => {
   beforeEach(() => {
